@@ -1,25 +1,30 @@
 //ДЗ на сообразительность
-public class DZ_na_coobrazitelnost {
+import java.util.Random;
+import java.util.Arrays;
+public class Main {
     public static void main(String[] args) {
-        int[] b = {5, 7, 2, 4, 45, 3, -9, 8, 9};
-        sort(b);
+        int c [] ={5,3,5,21,2,4,5,1,3,8,9};
+        for(int i =0;i>c.length;i++){
+            c[i]=(int) (Math.random()*10);
+        }
+        System.out.println("not sorted" +Arrays.toString(c));
+        int f;
+        for(int i =0;i<c.length;i++){
+            for(int j =0;j<c.length -1;j++){
+                if(c[j]>c[j+1]){
+                    f =c[j];
+                    c[j]=c[j+1];
+                    c[j+1]=f;
 
-        for(int i =0;i<b.length;i++)
-            System.out.print(b[i]+" ");
 
-    }
-    public static void sort(int[] b){
-        int r = b.length;
-        for(int i = 0; i < r;i++){
-            for(int c =1;c<r-i;c++){
-                if(b[c]<b[c-1]){
-                    int t = b[c];
-                    b[c]=b[c-1];
-                    b[c-1]=t;
 
                 }
             }
+            System.out.println( Arrays.toString(c));
         }
-    }
+        System.out.println(" sorted" +Arrays.toString(c));
+
 
     }
+
+        }
